@@ -462,7 +462,7 @@ void printf_type2(uint8_t *d, int len, int inpos, int num_entries)
 	for (i = 0; i < num_entries; i++) {
 		u64 = frame_get_u64(&d[inpos+i*8]);
 		if (!u64) continue;
-		printf("type2 8*%i 0x%016lX\n", i, u64);
+		printf("type2 8*%i 0x%016llX\n", i, u64);
 		for (j = 0; j < 4; j++) {
 			u16 = frame_get_u16(&d[inpos+i*8+j*2]);
 			if (u16)
